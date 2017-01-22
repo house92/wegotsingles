@@ -1,0 +1,110 @@
+@import 'colours';
+
+/*ALL SCREEN SIZES*/
+
+.home-jumbotron {
+  height: 48rem;
+  opacity: 0.8;
+  img {
+    width: 100%;
+  }
+}
+
+.home-jumbotron-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  color: map-get($colours, white);
+  p {
+    text-align: center;
+    margin-top: 1em;
+    padding: 1em;
+    background-color: map-get($colours, red);
+    border-radius: 4px;
+  }
+  p:hover {
+    background-color: map-get($colours, brown);
+  }
+  a {
+    color: map-get($colours, white);
+  }
+  a:hover {
+    text-decoration: none;
+    color: map-get($colours, white);
+  }
+}
+
+.home-featured-profiles {
+  height: auto;
+  background-color: map-get($colours, red);
+}
+
+.feat {
+  text-align: center; 
+  padding: 2em;
+  color: map-get($colours, brown);
+  background-image: url("heart-dividers.png");
+  background-repeat: no-repeat;
+  background-position: center 10rem;
+  margin-top: 0;
+}
+
+.profile {
+  height: 90%;
+  border: 2px solid map-get($colours, brown);
+}
+
+.home-stories {
+  height: 45rem;
+  background-image: url(hands.jpeg);
+  background-size: cover;
+  opacity: 0.2;
+}
+
+.feat-stories {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30%);
+  width: 60%;
+}
+
+.story {
+  p {
+  border: 2px solid map-get($colours, brown);
+  padding: 2rem;
+  }
+  cite {
+    color: map-get($colours, red);
+  }
+}
+
+/*ONLY PHONE AND TABLET SCREENS (MAX WIDTH 1023PX)*/
+
+@media screen and (max-width: 1023px) {
+  .feature-prof {
+    height: 40rem;
+    width: 90%;
+  }
+  .profile {
+    width: 80%;
+    margin-left: 15%;
+    margin: 0 auto;
+    float: none; 
+  }
+} 
+
+/*ONLY DESKTOP SCREENS (MIN WIDTH 1024PX)*/
+
+@media screen and (min-width: 1024px) {
+  .feature-prof {
+    height: 25em;
+    width: 20em;
+  }
+  .profile {
+    width: 90%;
+    margin: 0 auto;
+    float: none; 
+  }
+}

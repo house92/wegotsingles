@@ -1,0 +1,40 @@
+<%= form_tag profiles_path, method: 'GET' do %>
+  <div>
+    <div>
+      <%= label_tag :gender %>
+      <%= select_tag(:with_gender, options_for_select(Profile.list_genders), { include_blank: '- Any -' }) %>
+    </div>
+    <div>
+      <%= label_tag :smoker %>
+      <%= select_tag(:with_smoker, options_for_select(Profile.list_smokers), { include_blank: '- Any -' }) %>
+    </div>
+    <div>
+      <%= label_tag :language %>
+      <%= select_tag(:with_languages, options_from_collection_for_select(Language.all, "id", "name"), { include_blank: '- Any -' }) %>
+    </div>
+    <div>
+      <%= label_tag :desire %>
+      <%= select_tag(:with_desires, options_from_collection_for_select(Desire.all, "id", "name"), { include_blank: '- Any -' }) %>
+    </div>
+    <div>
+      <%= label_tag :ethnicity %>
+      <%= select_tag(:with_ethnicities, options_from_collection_for_select(Ethnicity.all, "id", "name"), { include_blank: '- Any -' }) %>
+    </div>
+    <div>
+      <%= label_tag :religion %>
+      <%= select_tag(:with_religions, options_from_collection_for_select(Religion.all, "id", "name"), { include_blank: '- Any -' }) %>
+    </div>
+    <br>
+    <div>
+      <input type="reset" value="Reset filters">
+    </div>
+    <div>
+      <input type="submit" value="Submit filters">
+    </div>
+  </div>
+<% end %>
+
+<div>
+  <h1>Results</h1>
+  <%= render(partial: 'profiles/list', locals: { profiles: @profiles }) %>
+</div>

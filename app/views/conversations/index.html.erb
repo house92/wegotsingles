@@ -1,0 +1,15 @@
+<h1>Your messages</h1>
+
+<div id="conversations">
+  <% @conversations.each do |conversation| %>
+    <div id="conversation-with-<%= conversation[:contact][:id] %>" class="<%= conversation[:messages].last.read ? nil : "unread" %>">
+      <a href="/customers/<%= current_customer.id %>/messages?contact_id=<%= conversation[:contact][:id] %>">
+        <h3>Conversation with <%= conversation[:contact][:username] %></h3>
+        <span class="message-preview"><%= conversation[:messages].last.body[0..50] %></span>
+      </a>
+      <button id="delete-conversation-with-<%= conversation[:contact][:id] %>">DELETE</button>
+    </div>
+  <% end %>
+</div>
+
+<%= will_paginate @conversations %>

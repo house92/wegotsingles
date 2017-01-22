@@ -1,0 +1,8 @@
+<h1>Change preferences</h1>
+
+<%= form_for @customer.preference, url: {action: :update} do |f| %>
+<span>Preferred unit format:</span> <%= f.select(:metric, options_for_select([ ["Metric", "true"], ["Imperial", "false"] ]) ) %>
+
+<%= f.submit %>
+
+<% end %>

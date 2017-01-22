@@ -1,0 +1,110 @@
+<span id="user-id" data-id="<%= @customer.id %>"></span>
+<% puts @customer.preference.metric %>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="sidebar">
+        <div class="row">
+          <div class="col-md-12">
+            <img src="<%= @customer.profile.default_avatar.avatar_url(:thumb) unless @customer.profile.default_avatar.nil? %>" class="img-circle" />
+          </div>
+          <div class="row small-view">
+            <div class="col-md-11">
+              <h1 class="customer-name"><%= @customer.username.capitalize %></h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="stats">
+              <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                  <div class="row well well-sm">
+                    <div class="col-md-4 keys">
+                      <p>Gender:</p>
+                      <p>Age:</p>
+                      <p>Weight:</p>
+                      <p>Ethnicity:</p>
+                      <p>Occupation:</p>
+                      <p>Education:</p>
+                      <p>Religion:</p>
+                      <p>Star sign:</p>
+                      <p>Drinker:</p>
+                      <p>Smoker:</p>
+                    </div>
+                    <div class="col-md-8 values">
+                      <p><%= @customer.profile.gender unless @customer.profile.gender.nil? %></p>
+                      <p><%= (Date.today - @customer.date_of_birth).to_i / 365 %></p>
+                      <p><%= @customer.preference.metric ? "#{@customer.profile.metric}kg" : "#{@customer.profile.imperial}lb" %></p>
+                      <p><%#= @customer.profile.ethnicity unless @customer.profile.ethnicity.nil? %>European</p>
+                      <p><%= @customer.profile.occupation unless @customer.profile.occupation.nil? %></p>
+                      <p><%= @customer.profile.level_of_education unless @customer.profile.level_of_education.nil? %></p>
+                      <p><%#= @customer.profile.religions unless @customer.profile.religion.nil? %>Amish</p>
+                      <p><%= @customer.profile.star_sign unless @customer.profile.star_sign.nil? %></p>
+                      <p><%= @customer.profile.drinker unless @customer.profile.drinker.nil? %></p>
+                      <p><%= @customer.profile.smoker unless @customer.profile.smoker.nil? %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <div class="profile-main">
+        <div class="row large-view">
+          <div class="col-md-11">
+            <h1 class="customer-name"><%= @customer.username.capitalize %></h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 well">
+
+            <h2>About Me</h2>
+            <span class="edit-button glyphicon glyphicon-pencil"></span>
+            <p><%= @customer.profile.biography unless @customer.profile.biography.nil? %></p>
+            <textarea id="biography" class="hidden" rows="10"></textarea>
+            <button type="submit" class="hidden">Save</button>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-11 well">
+            <h4 class="profile-caption">LOOKING FOR</h4>
+            <ul>
+              <% @customer.desires.each do |desire| %>
+                <li><%= desire.name %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+
+          </div>
+        </div>
+      </div>
+      <div class="edit-profile-link">
+        <%= link_to edit_customer_path do %>
+          <p>EDIT PROFILE</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+
+
+<% unless @customer.id == current_customer.id %>
+  <%= link_to "Send message", root_url, id: "open-message-modal-button" %>
+<% end %>
+
+<div id="message-modal">
+  <input type="textarea" id="modal-message-text-area" />
+  <input type="submit" id="send-message-button" value="Send" />
+</div>

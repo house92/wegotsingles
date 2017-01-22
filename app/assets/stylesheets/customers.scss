@@ -1,0 +1,112 @@
+@import 'colours';
+
+// Place all the styles related to the Customers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#message-modal {
+  display: none;
+}
+.avatar {
+  display: table-cell;
+  border: 3px solid black;
+  padding: 5px;
+  &.selectable {
+    img {
+      height: 100px;
+    }
+    &:not(:last-child) {
+      border-right: 3px;
+    }
+  }
+}
+.avatarContainer > .avatar:not(:last-child) {
+  border-right: none;
+}
+.center {
+  text-align: center;
+}
+.modal {
+  background: #f6f6f6;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.absolute-center.is-responsive {
+  width: 50%;
+  height: 10em;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+.img-circle {
+  width: 80%;
+  margin: 3rem;
+}
+
+.customer-name {
+  margin: 3rem;
+  margin-left: -15px;
+  color: map-get($colours, brown);
+}
+
+.profile-caption {
+  color: map-get($colours, red);
+}
+
+.keys {
+  font-weight: bold;
+}
+
+.edit-profile-link {
+  padding: 1rem 2rem;
+  background-color: map-get($colours, red);
+  display: inline-block;
+  border-radius: 4px;
+  &:hover {
+    background-color: map-get($colours, brown);
+  }
+  a {
+    color: map-get($colours, white);
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.edit-button {
+  float: right;
+  top: -4rem !important;
+}
+
+textarea {
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  .large-view {
+    display: none;
+  }
+  .small-view {
+    text-align: center;
+  }
+}
+
+@media (min-width: 991px) {
+  .small-view {
+    display: none;
+  }
+}
+

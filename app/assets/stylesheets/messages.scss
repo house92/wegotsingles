@@ -1,0 +1,64 @@
+// Place all the styles related to the Messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colours';
+
+.message-window {
+  // background-color: map-get($colours, lightblue);
+}
+#messages {
+  & > div {
+    border: 1px solid black;
+    margin: 1rem 0;
+    margin-right: 10%;
+    padding: 0.5rem;
+    color: map-get($colours, brown);
+    background: map-get($colours, grayish);
+    border-radius: 10px 10px 10px 0;
+    box-shadow: 2px 2px 4px #888;
+    margin-left:1rem;
+    &.right {
+      margin-right: 0;
+      margin-left: 10%;
+      text-align: right;
+      color: map-get($colours, white);
+      background: map-get($colours, redish);
+      border-radius: 10px 10px 0 10px;
+      margin-right:1rem;
+    }
+    .sent {
+      font-size: 10px;
+    }
+  }
+}
+#reply {
+  margin: 0 5rem 1rem 5rem;
+  #message-text-area {
+    width: 35rem;
+  }
+  #send-message-button {
+    width: 10rem;
+  }
+}
+
+.modal {
+  background: #f6f6f6;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.absolute-center.is-responsive {
+  width: 50%;
+  height: 10em;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}

@@ -1,0 +1,58 @@
+@import 'libs/normalize';
+@import 'fonts';
+@import 'application/*';
+@import 'colours';
+@import 'homepage';
+@import 'success';
+/*@import 'registrations';*/
+@import 'forms';
+
+header {
+  background-color: map-get($colours, brown);
+  border: none;
+  #main-logo {
+    font-family: cursive;
+  }
+  ul {
+    text-align: center;
+    margin-top: 1.4rem;
+  }
+  li {
+    text-decoration: none;
+    color: map-get($colours, white);
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    border-right: 2px solid map-get($colours, white);
+    &:last-child {
+      border-right: none;
+    }
+  }
+  a {
+    color: map-get($colours, white);
+    padding: 1rem;
+    &:hover, &:focus {
+      text-decoration: none;
+      background-color: map-get($colours, red);
+      color: white;
+    }
+    &.logo {
+      padding: 0;
+    }
+  }
+  .dropdown-menu {
+    background-color: map-get($colours, brown) !important;
+    .dropdown-item {
+      display: block;
+    }
+  }
+}
+
+footer {
+  color: white;
+  background-color: map-get($colours, brown);
+  height: 8rem;
+  position: relative;
+  p {
+    padding: 4.5rem 2rem;
+  }
+}

@@ -1,0 +1,7 @@
+<div id="search_results">
+  <% @profiles.each do |profile| %>
+    <%= image_tag profile.default_avatar.avatar.url, {height: "50px"} unless profile.default_avatar.nil? %><br>
+    <%= link_to(profile.username, edit_customer_path(profile.id)) %>
+    <hr>
+  <% end %>
+</div>
