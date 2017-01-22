@@ -1,0 +1,31 @@
+/* line 7, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/conversations.scss */
+#conversations > div {
+  border: 1px solid black;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px #888;
+}
+/* line 14, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/conversations.scss */
+#conversations > div h3 {
+  margin: 1rem;
+}
+/* line 17, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/conversations.scss */
+#conversations > div .message-preview {
+  margin: 1rem;
+}
+/* line 20, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/conversations.scss */
+#conversations > div.unread {
+  font-weight: 900;
+  border-width: 4px;
+  background-color: #d7d7d7;
+}
+/* line 25, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/conversations.scss */
+#conversations > div button {
+  float: right;
+  border-radius: 5px;
+  border: 1px solid #333333;
+  background-color: #FFFFFF;
+  color: #333333;
+}

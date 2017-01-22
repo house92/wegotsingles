@@ -1,0 +1,134 @@
+/* line 6, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+#message-modal {
+  display: none;
+}
+
+/* line 9, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.avatar {
+  display: table-cell;
+  border: 3px solid black;
+  padding: 5px;
+}
+/* line 14, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.avatar.selectable img {
+  height: 100px;
+}
+/* line 17, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.avatar.selectable:not(:last-child) {
+  border-right: 3px;
+}
+
+/* line 22, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.avatarContainer > .avatar:not(:last-child) {
+  border-right: none;
+}
+
+/* line 25, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.center {
+  text-align: center;
+}
+
+/* line 28, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.modal {
+  background: #f6f6f6;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+/* line 36, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 42, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.absolute-center.is-responsive {
+  width: 50%;
+  height: 10em;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
+
+/* line 50, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.img-circle {
+  width: 80%;
+  margin: 3rem;
+}
+
+/* line 55, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.customer-name {
+  margin: 3rem;
+  margin-left: -15px;
+  color: #333333;
+}
+
+/* line 61, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.profile-caption {
+  color: #AB1E26;
+}
+
+/* line 65, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.keys {
+  font-weight: bold;
+}
+
+/* line 69, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-profile-link {
+  padding: 1rem 2rem;
+  background-color: #AB1E26;
+  display: inline-block;
+  border-radius: 4px;
+}
+/* line 74, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-profile-link:hover {
+  background-color: #333333;
+}
+/* line 77, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-profile-link a {
+  color: #FFFFFF;
+}
+/* line 79, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-profile-link a:hover {
+  color: white;
+  text-decoration: none;
+}
+/* line 84, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-profile-link p {
+  margin-bottom: 0;
+}
+
+/* line 89, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+.edit-button {
+  float: right;
+  top: -4rem !important;
+}
+
+/* line 94, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+textarea {
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  /* line 99, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+  .large-view {
+    display: none;
+  }
+
+  /* line 102, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+  .small-view {
+    text-align: center;
+  }
+}
+@media (min-width: 991px) {
+  /* line 108, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/customers.scss */
+  .small-view {
+    display: none;
+  }
+}

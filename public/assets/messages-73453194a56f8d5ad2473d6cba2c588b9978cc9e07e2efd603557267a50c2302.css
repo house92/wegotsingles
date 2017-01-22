@@ -1,0 +1,67 @@
+/* line 10, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#messages > div {
+  border: 1px solid black;
+  margin: 1rem 0;
+  margin-right: 10%;
+  padding: 0.5rem;
+  color: #333333;
+  background: #F1F0F0;
+  border-radius: 10px 10px 10px 0;
+  box-shadow: 2px 2px 4px #888;
+  margin-left: 1rem;
+}
+/* line 20, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#messages > div.right {
+  margin-right: 0;
+  margin-left: 10%;
+  text-align: right;
+  color: #FFFFFF;
+  background: #C93C43;
+  border-radius: 10px 10px 0 10px;
+  margin-right: 1rem;
+}
+/* line 29, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#messages > div .sent {
+  font-size: 10px;
+}
+
+/* line 34, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#reply {
+  margin: 0 5rem 1rem 5rem;
+}
+/* line 36, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#reply #message-text-area {
+  width: 35rem;
+}
+/* line 39, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+#reply #send-message-button {
+  width: 10rem;
+}
+
+/* line 44, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+.modal {
+  background: #f6f6f6;
+  border-radius: 5px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 10;
+}
+
+/* line 52, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+.absolute-center {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 58, /Users/samhouse/Documents/Coding/bootcamp/week9/wegotsingles_oct2016/app/assets/stylesheets/messages.scss */
+.absolute-center.is-responsive {
+  width: 50%;
+  height: 10em;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 40px;
+}
