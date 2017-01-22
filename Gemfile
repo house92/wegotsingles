@@ -15,7 +15,6 @@ gem 'rmagick'
 
 gem 'filterrific', '< 2.1'
 gem 'will_paginate'
-gem 'timecop'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -26,6 +25,7 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'launchy'
+  gem 'timecop'
 end
 
 group :test do
